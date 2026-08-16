@@ -2,9 +2,9 @@
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "cemex-skills",
   "version": "1.1.0",
-  "description": "Official catalog of authorized CEMEX skills and plugins",
+  "description": "Beta. Catalogo de plugins de asesoria ejecutiva para Claude Code y Claude Cowork. | Beta. Executive advisory plugin catalog for Claude Code and Claude Cowork.",
   "owner": {
-    "name": "CEMEX Digital",
+    "name": "CEMEX Skills",
     "email": "skills@cx-landing.com",
     "url": "https://skills.cx-landing.com"
   },
@@ -17,7 +17,7 @@
       "source": "./plugins/cemex/cemex-directores",
       "version": "1.0.0",
       "displayName": "Guia en espanol del Consejo Ejecutivo",
-      "description": "Empieza aqui. Enruta una peticion escrita en espanol al asesor C-level correcto: finanzas, operacion, tecnologia, producto, legal, talento, datos y sala de consejo.",
+      "description": "Empieza aqui. Enruta una peticion escrita en espanol al asesor C-level correcto: finanzas, operacion, tecnologia, producto, legal, talento, datos y sala de consejo. | Start here. Routes a Spanish request to the right C-level advisor.",
       "category": "guia",
       "keywords": ["espanol", "guia", "indice", "directores", "consejo"]
     },
@@ -26,7 +26,7 @@
       "source": "./plugins/baseline/c-level-skills",
       "version": "2.9.0",
       "displayName": "Consejo Ejecutivo (56 asesores)",
-      "description": "Asesoria C-level: finanzas, operacion, tecnologia, producto, marketing, ventas, riesgo, talento, datos, IA, legal y clientes, mas sesiones de consejo y analisis de escenarios. Bundle MIT vendorizado de alirezarezvani/claude-skills, contenido en ingles.",
+      "description": "Asesoria C-level: finanzas, operacion, tecnologia, producto, marketing, ventas, riesgo, talento, datos, IA, legal y clientes, mas sesiones de consejo y analisis de escenarios. Contenido en ingles. | C-level advisory across finance, operations, technology, product, risk, people, data and legal. Vendored MIT bundle from alirezarezvani/claude-skills.",
       "category": "advisory",
       "keywords": ["c-level", "strategy", "advisory", "ceo", "board"]
     }

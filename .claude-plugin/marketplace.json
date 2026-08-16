@@ -8,9 +8,6 @@
     "email": "skills@cx-landing.com",
     "url": "https://skills.cx-landing.com"
   },
-  "metadata": {
-    "pluginRoot": "./plugins"
-  },
   "plugins": [
     {
       "name": "cemex-directores",

@@ -35,6 +35,23 @@ if (!Array.isArray(market.plugins) || market.plugins.length === 0) {
   fail('marketplace.plugins must be a non-empty array');
 }
 
+// pluginRoot is PREPENDED to relative sources. Setting both it and a source that
+// already carries the prefix resolves to ./plugins/plugins/... The Claude Code CLI
+// tolerates it; stricter surfaces (the claude.ai and Cowork plugin dialog) do not,
+// and the marketplace fails to load there with no useful error.
+const pluginRoot = market.metadata?.pluginRoot;
+if (pluginRoot) {
+  const prefix = pluginRoot.replace(/^\.\//, '').replace(/\/$/, '');
+  for (const plugin of market.plugins) {
+    if (typeof plugin.source === 'string' && plugin.source.replace(/^\.\//, '').startsWith(`${prefix}/`)) {
+      fail(
+        `${plugin.name}: source "${plugin.source}" already contains pluginRoot "${pluginRoot}". ` +
+          'Drop metadata.pluginRoot or shorten the source, never both.',
+      );
+    }
+  }
+}
+
 // Governance metadata lives in the canonical GitLab repo, never in the mirror.
 const reserved = new Set([
   'cemex',

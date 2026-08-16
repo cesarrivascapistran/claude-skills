@@ -1,0 +1,13 @@
+{
+  "name": "cemex-directores",
+  "displayName": "Guia en espanol del Consejo Ejecutivo",
+  "description": "Capa de entrada en espanol para el catalogo CEMEX Skills. Enruta una peticion escrita en espanol al asesor C-level correcto de c-level-skills, sin modificar el bundle vendorizado.",
+  "version": "1.0.0",
+  "author": {
+    "name": "CEMEX Digital"
+  },
+  "license": "Proprietary",
+  "skills": [
+    "./skills"
+  ]
+}

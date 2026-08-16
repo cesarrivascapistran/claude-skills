@@ -1,19 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "cemex-skills",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Official catalog of authorized CEMEX skills and plugins",
   "owner": {
     "name": "CEMEX Digital",
     "email": "skills@cx-landing.com",
     "url": "https://skills.cx-landing.com"
   },
+  "metadata": {
+    "pluginRoot": "./plugins"
+  },
   "plugins": [
+    {
+      "name": "cemex-directores",
+      "source": "./plugins/cemex/cemex-directores",
+      "version": "1.0.0",
+      "displayName": "Guia en espanol del Consejo Ejecutivo",
+      "description": "Empieza aqui. Enruta una peticion escrita en espanol al asesor C-level correcto: finanzas, operacion, tecnologia, producto, legal, talento, datos y sala de consejo.",
+      "category": "guia",
+      "keywords": ["espanol", "guia", "indice", "directores", "consejo"]
+    },
     {
       "name": "c-level-skills",
       "source": "./plugins/baseline/c-level-skills",
       "version": "2.9.0",
-      "description": "C-suite advisory (vendored MIT bundle from alirezarezvani/claude-skills): CEO, CTO, CFO, and the rest of the virtual board.",
+      "displayName": "Consejo Ejecutivo (56 asesores)",
+      "description": "Asesoria C-level: finanzas, operacion, tecnologia, producto, marketing, ventas, riesgo, talento, datos, IA, legal y clientes, mas sesiones de consejo y analisis de escenarios. Bundle MIT vendorizado de alirezarezvani/claude-skills, contenido en ingles.",
       "category": "advisory",
       "keywords": ["c-level", "strategy", "advisory", "ceo", "board"]
     }

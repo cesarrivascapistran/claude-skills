@@ -35,6 +35,8 @@ Usa la URL HTTPS completa. La forma corta `cesarrivascapistran/claude-skills` ta
 3. Pega `cesarrivascapistran/claude-skills` y sincroniza. Si lo rechaza, pega la URL completa `https://github.com/cesarrivascapistran/claude-skills.git`.
 4. Instala **cemex-directores** y **c-level-skills**. En una tarea, escribe `/` o haz click en `+` para usarlos.
 
+> **Agrégalo una sola vez.** El alta queda guardada en tu cuenta, no en la computadora. Si sale el error rojo **No se pudo agregar el marketplace**, lo más probable es que ya esté agregado: cierra el diálogo y búscalo en la lista de plugins antes de reintentar. Reintentar siempre va a fallar.
+
 ### Cómo saber que quedó
 
 Corre `/plugin` y confirma que los dos aparecen como enabled. Después escribe `/` en una tarea: la guía en español sale como `/cemex-directores:consejo` y los asesores como `/c-level-skills:...` y `/c-level-agents:...`.
@@ -45,6 +47,7 @@ Para empezar, escribe `/cemex-directores:consejo` y describe tu situación en es
 
 | Mensaje | Qué hacer |
 | --- | --- |
+| **No se pudo agregar el marketplace** | Casi siempre significa que ya lo tienes. El alta es por cuenta y solo se puede hacer una vez. Cierra el diálogo y revisa la lista de plugins. Si de verdad no está, entonces tienes registrado otro marketplace que viene del mismo repositorio de origen: quítalo primero y vuelve a agregar. |
 | `Permission denied (publickey)` | Usaste la forma corta. Repite con la URL HTTPS completa. |
 | `Plugin ... not found in marketplace` | El marketplace se agregó pero el catálogo está viejo. Corre `/plugin marketplace update cemex-skills`. |
 | `This plugin uses a source type your Claude Code version does not support` | Agregaste la URL del sitio en vez de este repositorio. Usa la URL de arriba, o actualiza Claude Code a v2.1.224 o superior. |
@@ -97,6 +100,8 @@ Use the full HTTPS URL. The short form `cesarrivascapistran/claude-skills` also 
 3. Paste `cesarrivascapistran/claude-skills` and sync. If that is rejected, paste the full URL `https://github.com/cesarrivascapistran/claude-skills.git` instead.
 4. Install **cemex-directores** and **c-level-skills**. In a task, type `/` or click `+` to use their skills.
 
+> **Add it once.** The marketplace is registered against your account, not your machine. If you get the red **could not add marketplace** error, it is almost always already there: close the dialog and look in the plugin list before retrying. Retrying will always fail.
+
 ### Check it worked
 
 Run `/plugin` and confirm both plugins show status enabled. Then type `/` in a task: the Spanish guide appears as `/cemex-directores:consejo` and the advisors as `/c-level-skills:...` and `/c-level-agents:...`.
@@ -105,6 +110,7 @@ Run `/plugin` and confirm both plugins show status enabled. Then type `/` in a t
 
 | Message | What to do |
 | --- | --- |
+| **Could not add marketplace** | Almost always means you already have it. Registration is per account and can only happen once. Close the dialog and check the plugin list. If it genuinely is not there, you have another marketplace registered from the same upstream repository: remove that one first, then add this one. |
 | `Permission denied (publickey)` | You used the short form. Re-run with the full HTTPS URL above. |
 | `Plugin ... not found in marketplace` | The marketplace was added but the catalog is stale. Run `/plugin marketplace update cemex-skills`. |
 | `This plugin uses a source type your Claude Code version does not support` | You added the catalog site URL instead of this repository. Use the HTTPS URL above, or update Claude Code to v2.1.224 or later. |

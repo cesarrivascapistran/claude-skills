@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
   "name": "cemex-skills",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Beta. Catalogo de plugins de asesoria ejecutiva para Claude Code y Claude Cowork. | Beta. Executive advisory plugin catalog for Claude Code and Claude Cowork.",
   "owner": {
     "name": "CEMEX Skills",
@@ -10,22 +10,22 @@
   },
   "plugins": [
     {
-      "name": "cemex-directores",
-      "source": "./plugins/cemex/cemex-directores",
-      "version": "1.0.0",
-      "displayName": "Guia en espanol del Consejo Ejecutivo",
-      "description": "Empieza aqui. Enruta una peticion escrita en espanol al asesor C-level correcto: finanzas, operacion, tecnologia, producto, legal, talento, datos y sala de consejo. | Start here. Routes a Spanish request to the right C-level advisor.",
-      "category": "guia",
-      "keywords": ["espanol", "guia", "indice", "directores", "consejo"]
+      "name": "c-level-skills",
+      "source": "./plugins/c-level-skills",
+      "version": "3.0.0",
+      "displayName": "Consejo Ejecutivo",
+      "description": "Empieza aqui. 56 asesores C-level mas un indice en espanol que enruta tu peticion al asesor correcto: finanzas, operacion, tecnologia, producto, marketing, ventas, riesgo, talento, datos, IA, legal y clientes, mas sesiones de consejo y analisis de escenarios. | Start here. 56 C-level advisors plus a Spanish routing index.",
+      "category": "advisory",
+      "keywords": ["c-level", "consejo", "espanol", "advisory", "board"]
     },
     {
-      "name": "c-level-skills",
-      "source": "./plugins/baseline/c-level-skills",
-      "version": "2.9.0",
-      "displayName": "Consejo Ejecutivo (56 asesores)",
-      "description": "Asesoria C-level: finanzas, operacion, tecnologia, producto, marketing, ventas, riesgo, talento, datos, IA, legal y clientes, mas sesiones de consejo y analisis de escenarios. Contenido en ingles. | C-level advisory across finance, operations, technology, product, risk, people, data and legal. Vendored MIT bundle from alirezarezvani/claude-skills.",
-      "category": "advisory",
-      "keywords": ["c-level", "strategy", "advisory", "ceo", "board"]
+      "name": "deck-builder",
+      "source": "./plugins/deck-builder",
+      "version": "1.0.0",
+      "displayName": "Generador de presentaciones",
+      "description": "Genera presentaciones PowerPoint desde una especificacion JSON, usando la plantilla corporativa que tu apuntes. Sin marca embebida: resuelve la plantilla por --template o por variable de entorno. | Builds PowerPoint decks from a JSON spec using whichever corporate template you point it at.",
+      "category": "productivity",
+      "keywords": ["pptx", "powerpoint", "deck", "presentacion", "slides"]
     }
   ]
 }

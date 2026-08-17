@@ -1,0 +1,77 @@
+{
+  "cover": {
+    "title": "Revision trimestral de operaciones",
+    "description": "Resultados del trimestre, desviaciones frente a plan y decisiones pendientes",
+    "presenter": "Nombre Apellido, Direccion de Operaciones",
+    "date": "Marzo 2026"
+  },
+  "agenda": [
+    "Contexto y alcance",
+    "Resultados del trimestre",
+    "Desviaciones y causas",
+    "Plan de accion",
+    "Decisiones que se piden hoy"
+  ],
+  "sections": [
+    {
+      "header": {
+        "title": "01",
+        "subtitle": "Resultados del trimestre"
+      },
+      "slides": [
+        {
+          "layout": "title_and_text",
+          "title": "Volumen crece 6 por ciento y el margen cae 2 pp",
+          "subtitle": "Trimestre cerrado contra plan aprobado",
+          "bullets": [
+            "Volumen: 1.24 M t, 6 por ciento sobre el trimestre anterior",
+            "Margen operativo: 18.4 por ciento, 2 pp bajo plan",
+            "El costo de flete explica 1.6 pp de la caida",
+            "Fuente: cierre contable del trimestre"
+          ]
+        },
+        {
+          "layout": "two_column",
+          "title": "Lo que funciono y lo que no",
+          "left": {
+            "heading": "Funciono",
+            "bullets": [
+              "Reduccion de tiempo de ciclo en dos plantas",
+              "Cumplimiento de entregas en 96 por ciento"
+            ]
+          },
+          "right": {
+            "heading": "No funciono",
+            "bullets": [
+              "Renegociacion de flete, sigue pendiente",
+              "Cobertura de inventario bajo el objetivo"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "header": {
+        "title": "02",
+        "subtitle": "Plan de accion"
+      },
+      "slides": [
+        {
+          "layout": "content",
+          "title": "Tres acciones con responsable y fecha",
+          "table": {
+            "headers": ["Accion", "Responsable", "Fecha"],
+            "rows": [
+              ["Cerrar renegociacion de flete", "Direccion de Compras", "30 abril"],
+              ["Subir cobertura de inventario a 45 dias", "Direccion de Operaciones", "31 mayo"],
+              ["Revisar tarifas por region", "Direccion Comercial", "15 junio"]
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "thank_you": true,
+  "backup": false,
+  "language": "es"
+}

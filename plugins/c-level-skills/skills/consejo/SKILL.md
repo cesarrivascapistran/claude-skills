@@ -59,17 +59,17 @@ terminos financieros estandar (EBITDA, runway, NRR, churn) como estan.
 
 ## Capa de agentes
 
-La capa `c-level-agents` corre revisiones y sesiones con varios agentes a la vez. Es mas
+Estos comandos vienen de la capa de agentes y corren revisiones y sesiones con varios agentes a la vez. Es mas
 cara y mas lenta que un asesor suelto: usala cuando la decision lo amerite.
 
 | La persona pide | Invoca |
 | --- | --- |
-| Sesion de consejo con varios agentes a la vez | `/c-level-agents:boardroom` |
-| Resumen ejecutivo de una situacion | `/c-level-agents:brief` |
-| Tomar una decision con contraste entre areas | `/c-level-agents:decide` |
-| Plan de ejecucion de una decision tomada | `/c-level-agents:execute` |
-| Post mortem de algo que salio mal | `/c-level-agents:post-mortem` |
-| Revision desde un area concreta | `/c-level-agents:cfo-review` y sus pares `cto-`, `cmo-`, `cro-`, `ciso-`, `cpo-`, `cdo-`, `caio-`, `cco-`, `gc-`, `vpe-` |
+| Sesion de consejo con varios agentes a la vez | `/c-level-skills:boardroom` |
+| Resumen ejecutivo de una situacion | `/c-level-skills:brief` |
+| Tomar una decision con contraste entre areas | `/c-level-skills:decide` |
+| Plan de ejecucion de una decision tomada | `/c-level-skills:execute` |
+| Post mortem de algo que salio mal | `/c-level-skills:post-mortem` |
+| Revision desde un area concreta | `/c-level-skills:cfo-review` y sus pares `cto-`, `cmo-`, `cro-`, `ciso-`, `cpo-`, `cdo-`, `caio-`, `cco-`, `gc-`, `vpe-` |
 
 ## Limites que hay que decir en voz alta
 

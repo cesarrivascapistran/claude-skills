@@ -1,0 +1,15 @@
+{
+  "name": "c-level-skills",
+  "displayName": "Consejo Ejecutivo",
+  "description": "Beta. Consejo ejecutivo completo con guia de entrada en espanol: 56 asesores C-level mas un indice que enruta una peticion escrita en espanol al asesor correcto. | Beta. Full virtual board of 56 C-level advisors plus a Spanish routing index.",
+  "version": "3.0.0",
+  "author": {
+    "name": "CEMEX Skills"
+  },
+  "license": "MIT",
+  "skills": [
+    "./skills",
+    "./vendor/c-level-skills/skills",
+    "./vendor/c-level-skills/c-level-agents/skills"
+  ]
+}

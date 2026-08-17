@@ -1,0 +1,16 @@
+{
+  "_comment": "Example only. These are neutral placeholder values, not any organization's palette. Copy this file, replace the hex values with your own, and pass it with --tokens. Keys not listed here are ignored, and any key you omit keeps its default.",
+  "colors": {
+    "dark_text": { "hex": "#3D3D3D", "role": "Body text, paragraphs" },
+    "white": { "hex": "#FFFFFF", "role": "Backgrounds, text on dark slides" },
+    "brand_primary": { "hex": "#1F4E79", "role": "Titles, headings, emphasis, hyperlinks" },
+    "brand_accent": { "hex": "#2E8B57", "role": "Positive KPIs, success indicators" },
+    "brand_deep": { "hex": "#163654", "role": "Agenda item text" },
+    "blue_light": { "hex": "#4A90D9", "role": "Chart accent 1, secondary links" },
+    "red": { "hex": "#C0392B", "role": "Alerts, negative KPIs, urgency" },
+    "green_soft": { "hex": "#5CB85C", "role": "Chart accent 3" },
+    "amber": { "hex": "#E6A23A", "role": "Warnings, at-risk indicators" },
+    "orange": { "hex": "#E07B39", "role": "Chart accent 5" },
+    "purple": { "hex": "#7B5EA7", "role": "Chart accent 6" }
+  }
+}

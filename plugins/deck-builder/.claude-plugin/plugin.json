@@ -1,0 +1,13 @@
+{
+  "name": "deck-builder",
+  "displayName": "Generador de presentaciones",
+  "description": "Beta. Genera presentaciones PowerPoint desde una especificacion JSON, sobre la plantilla .pptx que tu apuntes. No empaqueta plantillas ni paletas de ninguna organizacion. | Beta. Builds PowerPoint decks from a JSON spec on top of whichever .pptx template you point it at.",
+  "version": "1.0.0",
+  "author": {
+    "name": "CEMEX Skills"
+  },
+  "license": "Proprietary",
+  "skills": [
+    "./skills"
+  ]
+}

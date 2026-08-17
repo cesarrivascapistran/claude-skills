@@ -20,11 +20,16 @@ El sitio [skills.cx-landing.com](https://skills.cx-landing.com) lista el estado 
 
 ```
 /plugin marketplace add https://github.com/cesarrivascapistran/claude-skills.git
-/plugin install cemex-directores@cemex-skills
 /plugin install c-level-skills@cemex-skills
 ```
 
-Instala **los dos**. `cemex-directores` es la guía en español: te dice cuál de los 56 asesores responde tu pregunta. `c-level-skills` es el contenido.
+Es **un solo plugin**. Trae los 56 asesores y, además, una guía en español que te dice cuál de ellos responde tu pregunta.
+
+Si además vas a armar presentaciones, agrega el segundo:
+
+```
+/plugin install deck-builder@cemex-skills
+```
 
 Usa la URL HTTPS completa. La forma corta `cesarrivascapistran/claude-skills` también funciona, pero Claude Code sondea SSH primero, así que en una máquina que ya tiene llaves SSH de otro host puede fallar con `Permission denied (publickey)`.
 
@@ -33,15 +38,15 @@ Usa la URL HTTPS completa. La forma corta `cesarrivascapistran/claude-skills` ta
 1. Abre **Customize** y luego **Plugins**.
 2. Haz click en **+** y después en **Add marketplace**.
 3. Pega `cesarrivascapistran/claude-skills` y sincroniza. Si lo rechaza, pega la URL completa `https://github.com/cesarrivascapistran/claude-skills.git`.
-4. Instala **cemex-directores** y **c-level-skills**. En una tarea, escribe `/` o haz click en `+` para usarlos.
+4. Instala **c-level-skills**, y **deck-builder** si vas a armar presentaciones. En una tarea, escribe `/` o haz click en `+` para usarlos.
 
 > **Agrégalo una sola vez.** El alta queda guardada en tu cuenta, no en la computadora. Si sale el error rojo **No se pudo agregar el marketplace**, lo más probable es que ya esté agregado: cierra el diálogo y búscalo en la lista de plugins antes de reintentar. Reintentar siempre va a fallar.
 
 ### Cómo saber que quedó
 
-Corre `/plugin` y confirma que los dos aparecen como enabled. Después escribe `/` en una tarea: la guía en español sale como `/cemex-directores:consejo` y los asesores como `/c-level-skills:...` y `/c-level-agents:...`.
+Corre `/plugin` y confirma que aparece como enabled. Después escribe `/` en una tarea: la guía en español sale como `/c-level-skills:consejo` y los asesores como `/c-level-skills:...`.
 
-Para empezar, escribe `/cemex-directores:consejo` y describe tu situación en español.
+Para empezar, escribe `/c-level-skills:consejo` y describe tu situación en español.
 
 ### Si algo falla
 
@@ -57,14 +62,14 @@ Para empezar, escribe `/cemex-directores:consejo` y describe tu situación en es
 
 | Plugin | Versión | Auditoría | Descripción |
 | --- | --- | --- | --- |
-| `cemex-directores` | 1.0.0 | PASS | Capa de entrada en español. Enruta una petición escrita en español al asesor correcto. Una sola skill, sin scripts, sin hooks, sin servidores MCP. |
-| `c-level-skills` | 2.9.0 | WARN (contenido de terceros, sin localizar) | Consejo ejecutivo completo: asesores de CEO, CTO, CFO, COO, CPO, CMO, CRO, CISO y CHRO, más General Counsel, datos, IA, clientes, ingeniería, mentor ejecutivo, sesiones de consejo, análisis de escenarios, manual de fusiones y la capa de agentes founder-mode. |
+| `deck-builder` | 1.0.0 | PASS | Genera presentaciones PowerPoint desde una especificación JSON, sobre la plantilla que le indiques. No empaqueta plantillas ni paletas de ninguna organización. |
+| `c-level-skills` | 3.0.0 | WARN (contenido de terceros, sin localizar) | Consejo ejecutivo completo: asesores de CEO, CTO, CFO, COO, CPO, CMO, CRO, CISO y CHRO, más General Counsel, datos, IA, clientes, ingeniería, mentor ejecutivo, sesiones de consejo, análisis de escenarios, manual de fusiones y la capa de agentes founder-mode. |
 
 ### Notas
 
 - Lo autorizado es un commit específico y auditado, nunca una rama móvil. Las actualizaciones llegan por una publicación controlada, no siguiendo upstream.
 - `c-level-skills` viene de [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) (`c-level-advisor`, MIT), commit `aa8d778`, auditado el 2026-08-14. Superficie de privilegio: sin hooks, sin servidores MCP, los scripts de Python usan solo librería estándar; 14 definiciones de agente otorgan `Write` y `Bash`.
-- `cemex-directores` es contenido propio del catálogo. Es aditivo: nunca modifica el bundle vendorizado.
+- La guía en español y los 13 agentes viven en la raíz del plugin; el bundle vendorizado queda intacto bajo `vendor/`, así que actualizarlo sigue siendo reemplazar un directorio.
 - El contenido vendorizado conserva su licencia MIT: ver [LICENSE](LICENSE) y `plugins/baseline/c-level-skills/LICENSE`.
 - **Este repositorio se genera.** Se publica desde el repositorio canónico con `scripts/publish-mirror.mjs`. Los commits hechos aquí directamente se sobreescriben en la siguiente publicación. Manda los cambios al canónico.
 - Cada push corre `scripts/validate-marketplace.mjs`, que falla si una entrada del catálogo deja de coincidir con la versión del manifiesto del plugin.
@@ -85,11 +90,16 @@ The site [skills.cx-landing.com](https://skills.cx-landing.com) lists each plugi
 
 ```
 /plugin marketplace add https://github.com/cesarrivascapistran/claude-skills.git
-/plugin install cemex-directores@cemex-skills
 /plugin install c-level-skills@cemex-skills
 ```
 
-Install **both**. `cemex-directores` is the Spanish guide: it tells you which of the 56 advisors answers your question. `c-level-skills` is the content.
+It is **one plugin**. It carries all 56 advisors plus a Spanish guide that tells you which one answers your question.
+
+If you also build presentations, add the second one:
+
+```
+/plugin install deck-builder@cemex-skills
+```
 
 Use the full HTTPS URL. The short form `cesarrivascapistran/claude-skills` also works, but Claude Code probes SSH first, so on a machine that already has SSH keys for another host it can fail with `Permission denied (publickey)`.
 
@@ -98,13 +108,13 @@ Use the full HTTPS URL. The short form `cesarrivascapistran/claude-skills` also 
 1. Open **Customize**, then **Plugins**.
 2. Click **+**, then **Add marketplace**.
 3. Paste `cesarrivascapistran/claude-skills` and sync. If that is rejected, paste the full URL `https://github.com/cesarrivascapistran/claude-skills.git` instead.
-4. Install **cemex-directores** and **c-level-skills**. In a task, type `/` or click `+` to use their skills.
+4. Install **c-level-skills**, and **deck-builder** if you build presentations. In a task, type `/` or click `+` to use their skills.
 
 > **Add it once.** The marketplace is registered against your account, not your machine. If you get the red **could not add marketplace** error, it is almost always already there: close the dialog and look in the plugin list before retrying. Retrying will always fail.
 
 ### Check it worked
 
-Run `/plugin` and confirm both plugins show status enabled. Then type `/` in a task: the Spanish guide appears as `/cemex-directores:consejo` and the advisors as `/c-level-skills:...` and `/c-level-agents:...`.
+Run `/plugin` and confirm it shows status enabled. Then type `/` in a task: the Spanish guide appears as `/c-level-skills:consejo` and the advisors as `/c-level-skills:...`.
 
 ### If something fails
 
@@ -120,14 +130,14 @@ Run `/plugin` and confirm both plugins show status enabled. Then type `/` in a t
 
 | Plugin | Version | Audit | Description |
 | --- | --- | --- | --- |
-| `cemex-directores` | 1.0.0 | PASS | Spanish entry layer. Routes a request written in Spanish to the right advisor. One skill, no scripts, no hooks, no MCP servers. |
-| `c-level-skills` | 2.9.0 | WARN (third-party content, not localized) | Complete virtual board: CEO, CTO, CFO, COO, CPO, CMO, CRO, CISO and CHRO advisors, plus General Counsel, data, AI, customer, engineering, executive mentor, board meetings, scenario war room, M&A playbook and the founder-mode agent layer. |
+| `deck-builder` | 1.0.0 | PASS | Builds PowerPoint decks from a JSON spec on top of whichever template you point it at. No organization's template or palette is bundled. |
+| `c-level-skills` | 3.0.0 | WARN (third-party content, not localized) | Complete virtual board: CEO, CTO, CFO, COO, CPO, CMO, CRO, CISO and CHRO advisors, plus General Counsel, data, AI, customer, engineering, executive mentor, board meetings, scenario war room, M&A playbook and the founder-mode agent layer. |
 
 ### Notes
 
 - What is authorized is a specific, audited commit, never a moving branch. Updates land here through a controlled publish, not by tracking upstream.
 - `c-level-skills` is vendored from [alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills) (`c-level-advisor`, MIT), upstream commit `aa8d778`, audited 2026-08-14. Privilege surface: no hooks, no MCP servers, Python scripts are standard-library only; 14 agent definitions grant `Write` and `Bash`.
-- `cemex-directores` is first-party catalog content. It is additive: it never modifies the vendored bundle.
+- The Spanish guide and the 13 agents live at the plugin root; the vendored bundle stays untouched under `vendor/`, so updating it remains a directory replace.
 - The vendored content keeps its MIT license: see [LICENSE](LICENSE) and `plugins/baseline/c-level-skills/LICENSE`.
 - **This repository is generated.** It is published from the canonical repository by `scripts/publish-mirror.mjs`. Commits made directly here are overwritten by the next publish. Send changes upstream.
 - Every push runs `scripts/validate-marketplace.mjs`, which fails if a catalog entry stops matching the version in the plugin's own manifest.
